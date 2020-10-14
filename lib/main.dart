@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'FoodCard.dart';
 import 'HomeText.dart';
 import 'InputBox.dart';
+import 'ScanButton.dart';
 
 void main() {
   runApp(Disdat());
@@ -56,40 +57,7 @@ class _HomeState extends State<Home> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 18.0),
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: SizedBox(
-                    width: 100,
-                  ),
-                ),
-                Expanded(
-                  flex: 5,
-                  child: SizedBox(
-                    width: 200,
-                    height: 54,
-                    child: RaisedButton(
-                      color: Color(0xFFfeda45),
-                      child: Text(
-                        "Scan Qr Code",
-                        style:
-                            TextStyle(color: Color(0xFFfefefb), fontSize: 20.0),
-                      ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14.0)),
-                      onPressed: () {},
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: SizedBox(
-                    width: 100,
-                  ),
-                ),
-              ],
-            ),
+            child: ScanButton(),
           ),
           HomeText(
             text: "Hot Now",
